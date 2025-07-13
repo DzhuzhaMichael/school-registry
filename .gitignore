@@ -1,0 +1,43 @@
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Build output
+/build/
+out/
+target/
+
+# Gradle
+.gradle/
+!gradle/wrapper/gradle-wrapper.jar
+*.log
+
+# Environment files
+.env
+*.env
+
+# PostgreSQL volume
+postgres_data/
+
+# Logs
+*.log
+
+# System files
+*.swp
+*.swo
+
+# Ignore test reports
+test-output/
+surefire-reports/
+
+# Ignore static code analysis reports
+/coverage/
+jacoco.exec
+
+# Node modules
+node_modules/
