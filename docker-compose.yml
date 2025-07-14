@@ -13,5 +13,27 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      - postgres
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/school-registry
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: master
+    ports:
+      - "8080:8080"
+
+  frontend:
+    build:
+      context: ./react-app
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+
 volumes:
   postgres_data:
