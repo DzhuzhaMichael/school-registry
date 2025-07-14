@@ -2,6 +2,7 @@ package test.task.schoolregistry.service;
 
 import jakarta.persistence.EntityExistsException;
 import jakarta.persistence.EntityNotFoundException;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
 import test.task.schoolregistry.dict.SchoolType;
 import test.task.schoolregistry.dto.SchoolFilterDto;
@@ -30,7 +31,7 @@ public class SchoolServiceImpl implements SchoolService {
     public SchoolResponseDto save(SchoolRequestDto schoolRequestDto) {
         School school = schoolMapper.mapToModel(schoolRequestDto);
         if (schoolRepository.existsByEdrpou(school.getEdrpou())) {
-            throw new EntityExistsException("School already exists");
+            throw new EntityExistsException("Школа з таким ЄДРПОУ вже внесена в реєстр");
         }
         return schoolMapper.mapToDto(schoolRepository.save(school));
     }
@@ -38,7 +39,7 @@ public class SchoolServiceImpl implements SchoolService {
     @Override
     public List<SchoolResponseDto> findByFilter(SchoolFilterDto filter) {
         SchoolType type = null;
-        if (filter.getType() != null) {
+        if (StringUtils.isNotBlank(filter.getType())) {
             type = SchoolType.fromCode(filter.getType());
         }
         List<School> schools =  schoolRepository.findByFilters(
@@ -53,9 +54,9 @@ public class SchoolServiceImpl implements SchoolService {
     @Override
     public SchoolResponseDto deactivate(Long id) {
         School school = schoolRepository.findById(id)
-                .orElseThrow(() -> new EntityNotFoundException("School with id " + id + " not found"));
+                .orElseThrow(() -> new EntityNotFoundException("Школа з id " + id + " не знайдена"));
         if (!school.isActive()) {
-            throw new IllegalStateException("School is already deactivated");
+            throw new IllegalStateException("Школа з таким id вже деактивована");
         }
         school.setActive(false);
         School saved = schoolRepository.save(school);

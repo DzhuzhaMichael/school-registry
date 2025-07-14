@@ -9,7 +9,7 @@
         <insert tableName="schools">
             <column name="name" value="Ліцей №1"/>
             <column name="edrpou" value="10000001"/>
-            <column name="region" value="Київ"/>
+            <column name="region" value="м. Київ"/>
             <column name="type" value="LYCEUM"/>
             <column name="is_active" valueBoolean="true"/>
         </insert>
@@ -23,7 +23,7 @@
         <insert tableName="schools">
             <column name="name" value="ЗЗСО №3"/>
             <column name="edrpou" value="10000003"/>
-            <column name="region" value="Київ"/>
+            <column name="region" value="м. Київ"/>
             <column name="type" value="ZZSO"/>
             <column name="is_active" valueBoolean="true"/>
         </insert>
@@ -58,7 +58,7 @@
         <insert tableName="schools">
             <column name="name" value="Гімназія №8"/>
             <column name="edrpou" value="10000008"/>
-            <column name="region" value="Київ"/>
+            <column name="region" value="м. Київ"/>
             <column name="type" value="GYMNASIUM"/>
             <column name="is_active" valueBoolean="true"/>
         </insert>
@@ -93,7 +93,7 @@
         <insert tableName="schools">
             <column name="name" value="Ліцей №13"/>
             <column name="edrpou" value="10000013"/>
-            <column name="region" value="Київ"/>
+            <column name="region" value="м. Київ"/>
             <column name="type" value="LYCEUM"/>
             <column name="is_active" valueBoolean="true"/>
         </insert>
@@ -128,7 +128,7 @@
         <insert tableName="schools">
             <column name="name" value="ЗЗСО №18"/>
             <column name="edrpou" value="10000018"/>
-            <column name="region" value="Київ"/>
+            <column name="region" value="м. Київ"/>
             <column name="type" value="ZZSO"/>
             <column name="is_active" valueBoolean="true"/>
         </insert>

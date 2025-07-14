@@ -1,27 +1,48 @@
-# Getting Started
+# 📘 Реєстр шкільних закладів
 
-### Reference Documentation
+Система обліку шкільних закладів: створення, перегляд та деактивація.
 
-For further reference, please consider the following sections:
+## 📌 Опис
 
-* [Official Gradle documentation](https://docs.gradle.org)
-* [Spring Boot Gradle Plugin Reference Guide](https://docs.spring.io/spring-boot/3.5.3/gradle-plugin)
-* [Create an OCI image](https://docs.spring.io/spring-boot/3.5.3/gradle-plugin/packaging-oci-image.html)
-* [Spring Data JPA](https://docs.spring.io/spring-boot/3.5.3/reference/data/sql.html#data.sql.jpa-and-spring-data)
-* [Spring Web](https://docs.spring.io/spring-boot/3.5.3/reference/web/servlet.html)
+Це монолітна Java Spring Boot + React система, яка дозволяє:
 
-### Guides
+- Переглядати перелік шкіл
+- Фільтрувати за областю, типом та активністю
+- Створювати нові школи
+- Деактивувати школи (без фізичного видалення з БД)
 
-The following guides illustrate how to use some features concretely:
+---
 
-* [Accessing Data with JPA](https://spring.io/guides/gs/accessing-data-jpa/)
-* [Building a RESTful Web Service](https://spring.io/guides/gs/rest-service/)
-* [Serving Web Content with Spring MVC](https://spring.io/guides/gs/serving-web-content/)
-* [Building REST services with Spring](https://spring.io/guides/tutorials/rest/)
+## ⚙️ Технології
 
-### Additional Links
+### 🔹 Backend
+- Java 17
+- Spring Boot 3.5.3
+- Spring Web, JPA, Validation
+- PostgreSQL
+- Liquibase
+- Gradle
 
-These additional references should also help you:
+### 🔸 Frontend
+- React + Vite
+- Axios
+- CSS Modules
 
-* [Gradle Build Scans – insights for your project's build](https://scans.gradle.com#gradle)
+### 🐳 Інфраструктура
+- Docker
+- Docker Compose
+
+---
+
+## 📁 ERD — Схема бази даних
+
+#### School
+- id: int, PK
+- name: string
+- edrpou: string (8 chars, unique)
+- region: string
+- type: enum (Гімназія, Ліцей, ЗЗСО)
+- is_active: boolean
+
+---
 
