@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
+
+    <changeSet id="2-insert-test-schools" author="m.dzhuzha">
+        <insert tableName="schools">
+            <column name="name" value="Ліцей №1"/>
+            <column name="edrpou" value="10000001"/>
+            <column name="region" value="Київ"/>
+            <column name="type" value="LYCEUM"/>
+            <column name="is_active" valueBoolean="true"/>
+        </insert>
+        <insert tableName="schools">
+            <column name="name" value="Гімназія №2"/>
+            <column name="edrpou" value="10000002"/>
+            <column name="region" value="Львівська"/>
+            <column name="type" value="GYMNASIUM"/>
+            <column name="is_active" valueBoolean="true"/>
+        </insert>
+        <insert tableName="schools">
+            <column name="name" value="ЗЗСО №3"/>
+            <column name="edrpou" value="10000003"/>
+            <column name="region" value="Київ"/>
+            <column name="type" value="ZZSO"/>
+            <column name="is_active" valueBoolean="true"/>
+        </insert>
+        <insert tableName="schools">
+            <column name="name" value="Ліцей №4"/>
+            <column name="edrpou" value="10000004"/>
+            <column name="region" value="Харківська"/>
+            <column name="type" value="LYCEUM"/>
+            <column name="is_active" valueBoolean="true"/>
+        </insert>
+        <insert tableName="schools">
+            <column name="name" value="Гімназія №5"/>
+            <column name="edrpou" value="10000005"/>
+            <column name="region" value="Дніпропетровська"/>
+            <column name="type" value="GYMNASIUM"/>
+            <column name="is_active" valueBoolean="true"/>
+        </insert>
+        <insert tableName="schools">
+            <column name="name" value="ЗЗСО №6"/>
+            <column name="edrpou" value="10000006"/>
+            <column name="region" value="Запорізька"/>
+            <column name="type" value="ZZSO"/>
+            <column name="is_active" valueBoolean="true"/>
+        </insert>
+        <insert tableName="schools">
+            <column name="name" value="Ліцей №7"/>
+            <column name="edrpou" value="10000007"/>
+            <column name="region" value="Полтавська"/>
+            <column name="type" value="LYCEUM"/>
+            <column name="is_active" valueBoolean="true"/>
+        </insert>
+        <insert tableName="schools">
+            <column name="name" value="Гімназія №8"/>
+            <column name="edrpou" value="10000008"/>
+            <column name="region" value="Київ"/>
+            <column name="type" value="GYMNASIUM"/>
+            <column name="is_active" valueBoolean="true"/>
+        </insert>
+        <insert tableName="schools">
+            <column name="name" value="ЗЗСО №9"/>
+            <column name="edrpou" value="10000009"/>
+            <column name="region" value="Черкаська"/>
+            <column name="type" value="ZZSO"/>
+            <column name="is_active" valueBoolean="true"/>
+        </insert>
+        <insert tableName="schools">
+            <column name="name" value="Ліцей №10"/>
+            <column name="edrpou" value="10000010"/>
+            <column name="region" value="Житомирська"/>
+            <column name="type" value="LYCEUM"/>
+            <column name="is_active" valueBoolean="true"/>
+        </insert>
+        <insert tableName="schools">
+            <column name="name" value="Гімназія №11"/>
+            <column name="edrpou" value="10000011"/>
+            <column name="region" value="Житомирська"/>
+            <column name="type" value="GYMNASIUM"/>
+            <column name="is_active" valueBoolean="true"/>
+        </insert>
+        <insert tableName="schools">
+            <column name="name" value="ЗЗСО №12"/>
+            <column name="edrpou" value="10000012"/>
+            <column name="region" value="Івано-Франківська"/>
+            <column name="type" value="ZZSO"/>
+            <column name="is_active" valueBoolean="true"/>
+        </insert>
+        <insert tableName="schools">
+            <column name="name" value="Ліцей №13"/>
+            <column name="edrpou" value="10000013"/>
+            <column name="region" value="Київ"/>
+            <column name="type" value="LYCEUM"/>
+            <column name="is_active" valueBoolean="true"/>
+        </insert>
+        <insert tableName="schools">
+            <column name="name" value="Гімназія №14"/>
+            <column name="edrpou" value="10000014"/>
+            <column name="region" value="Миколаївська"/>
+            <column name="type" value="GYMNASIUM"/>
+            <column name="is_active" valueBoolean="true"/>
+        </insert>
+        <insert tableName="schools">
+            <column name="name" value="ЗЗСО №15"/>
+            <column name="edrpou" value="10000015"/>
+            <column name="region" value="Житомирська"/>
+            <column name="type" value="ZZSO"/>
+            <column name="is_active" valueBoolean="true"/>
+        </insert>
+        <insert tableName="schools">
+            <column name="name" value="Ліцей №16"/>
+            <column name="edrpou" value="10000016"/>
+            <column name="region" value="Чернігівська"/>
+            <column name="type" value="LYCEUM"/>
+            <column name="is_active" valueBoolean="true"/>
+        </insert>
+        <insert tableName="schools">
+            <column name="name" value="Гімназія №17"/>
+            <column name="edrpou" value="10000017"/>
+            <column name="region" value="Кіровоградська"/>
+            <column name="type" value="GYMNASIUM"/>
+            <column name="is_active" valueBoolean="true"/>
+        </insert>
+        <insert tableName="schools">
+            <column name="name" value="ЗЗСО №18"/>
+            <column name="edrpou" value="10000018"/>
+            <column name="region" value="Київ"/>
+            <column name="type" value="ZZSO"/>
+            <column name="is_active" valueBoolean="true"/>
+        </insert>
+        <insert tableName="schools">
+            <column name="name" value="Ліцей №19"/>
+            <column name="edrpou" value="10000019"/>
+            <column name="region" value="Закарпатська"/>
+            <column name="type" value="LYCEUM"/>
+            <column name="is_active" valueBoolean="true"/>
+        </insert>
+        <insert tableName="schools">
+            <column name="name" value="Гімназія №20"/>
+            <column name="edrpou" value="10000020"/>
+            <column name="region" value="Рівненська"/>
+            <column name="type" value="GYMNASIUM"/>
+            <column name="is_active" valueBoolean="true"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

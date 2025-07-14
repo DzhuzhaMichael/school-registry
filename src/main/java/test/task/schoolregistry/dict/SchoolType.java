@@ -6,13 +6,22 @@ public enum SchoolType {
     LYCEUM("Ліцей"),
     ZZSO("ЗЗСО");
 
-    private String name;
+    private String code;
 
-    SchoolType(String name) {
-        this.name = name;
+    SchoolType(String code) {
+        this.code = code;
     }
 
-    public String getName() {
-        return name;
+    public String getCode() {
+        return code;
+    }
+
+    public static SchoolType fromCode(String code) {
+        for (SchoolType type : SchoolType.values()) {
+            if (type.getCode().equals(code)) {
+                return type;
+            }
+        }
+        throw new IllegalArgumentException("Unknown SchoolType: " + code);
     }
 }
