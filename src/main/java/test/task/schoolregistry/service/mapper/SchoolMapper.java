@@ -25,7 +25,7 @@ public class SchoolMapper {
         dto.setName(school.getName());
         dto.setEdrpou(school.getEdrpou());
         dto.setRegion(school.getRegion());
-        dto.setType(school.getName());
+        dto.setType(school.getType().getCode());
         dto.setActive(school.isActive());
         return dto;
     }
